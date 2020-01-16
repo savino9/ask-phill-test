@@ -1,0 +1,284 @@
+/* add a css reset */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+}
+
+button {
+  padding: 1em 5em;
+  border: 1px solid #000000;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.flex {
+  display: flex;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/main-bg.jpg");
+  background-size: cover;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1em 2em;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4em;
+}
+
+.main-menu ul, .secondary-menu {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-center {
+  justify-content: center;
+}
+
+.navbar-right {
+  justify-content: flex-end;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  padding-right: 16px;
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+
+.navbar-right a {
+  padding: 5px;
+}
+
+.navbar-right .shopping-cart {
+  background-color: #a33e46;
+  border-radius: 50%;
+}
+
+.logo {
+  background-image: url("./images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 50px;
+}
+
+/* Add background color to navbar links on hover */
+.navbar:hover, .dropdown-content {
+  background-color: #efb44e;
+}
+
+.navbar:hover a {
+  color: #000000;
+}
+
+.navbar:hover .logo {
+  background-image: url("./images/logo-black.png");
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  border-top: 1px solid #000000;
+}
+
+/* Show the dropdown menu on hover */
+.navbar:hover .dropdown-content {
+  display: block;
+}
+
+.menu-two-col {
+  width: 40%;
+  justify-content: center;
+  padding: 5em;
+}
+
+.menu-two-col .column {
+  width: 50%;
+}
+
+.menu-three-col-container {
+  width: 75%;
+}
+
+.menu-three-col-container h2 {
+  margin: 30px 0 20px 0;
+}
+
+.center {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 2em;
+}
+
+.center > * {
+  flex: 1 1 200px;
+}
+
+.three-col .column {
+  width: 48%;
+  margin: 2%;
+}
+
+.three-col .column:nth-child(3n) {
+  width: 100%;
+}
+
+.menu-three-col > * {
+  margin-right: 2em;
+}
+
+.menu-three-col .column .pic {
+  width: 200px;
+}
+
+.three-col .column .model {
+  width: 100%
+}
+
+/* Style links inside the columns */
+.column a, p {
+  float: none;
+  color: black;
+  padding: 3px 0px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.secondary-menu {
+  width: 100%;
+  justify-content: space-evenly;
+  color: #000000;
+  margin: 1em 0;
+}
+
+.secondary-menu li:first-child {
+  color: grey;
+}
+
+.good-silk, .container-fixed-el {
+  margin: 2%;
+}
+
+.good-silk > * {
+  width: 50%;
+}
+
+.good-silk .column:nth-child(2n) {
+  padding: 4em;
+  align-self: center;
+  max-width: 400px;
+  min-height: 450px;
+}
+
+.good-silk .column:nth-child(2n) h2{
+  font-size: 6em;
+  font-weight: 500;
+  line-height: 95px;
+  margin: 0;
+}
+
+.good-silk .column:nth-child(2n) p{
+  margin: 5em 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.fixed{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 80%;
+}
+
+.grid-2x2 .column {
+  width: 45%;
+  margin: 0 2%;
+}
+
+.price-details {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.price-details span {
+  justify-content: flex-end;
+}
+
+@media (max-width: 950px) {
+  /* media query for the three col section */
+  .center {
+    padding: 0;
+  }
+
+  .secondary-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+  }
+
+  .secondary-menu > * {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .secondary-menu li:first-child {
+    text-transform: uppercase;
+  }
+
+  /* media query for the good silk section */
+  .good-silk {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .good-silk > * {
+    width: 100%;
+  }
+
+  .good-silk .column:nth-child(2n) {
+    max-width: 100%;
+    padding: 1em;
+    min-height: auto;
+  }
+
+  .good-silk .column:nth-child(2n) h2{
+    font-size: 5em;
+  }
+  
+  .good-silk .column:nth-child(2n) p{
+    margin: 1.5em 0 2.5em 0;
+    padding: 0;
+    font-weight: 400;
+  }
+
+  .good-silk .column:nth-child(2n) button{
+    width: 100%;
+    padding: 2em;
+  }
+}
+
+
